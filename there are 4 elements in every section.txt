@@ -1,0 +1,14 @@
+ # html
+ there are 4 elements in every section
+  bulit 5 div inside one container + container for spescific to the card 
+  1 div for each element inside the card (pic, name, title , head ,pragraph)
+  # in css
+  use flex box for each card to manage the place of each elements inside
+  
+    * try to use pseudo selector to practice *
+  use gird to divide the page 
+  -using grid area to give each elemnt its palce 
+  - use tranform with opactiy to create the back round quotation 
+  -
+  use meida query to make the mobile version
+  you might need to use flex ()box order to change the order of the elements 
