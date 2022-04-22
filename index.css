@@ -68,7 +68,7 @@ grid-area: one;
 #container{
     display: grid;
     grid-template-columns: repeat(2,350px );
-    grid-template-rows: repeat(2,300px);
+    grid-template-rows: repeat(2,fit-content);
     grid-template-areas: 
     "one one two three"
    "five four four three"
@@ -77,16 +77,23 @@ grid-area: one;
     gap: 20px;
     justify-content: center;
 }
-h6{
+.title{
  text-align: center;
-transform: translate(-83px , 11px);
-}
+ opacity: 50%;
+} 
 
+.name{
+    font-weight: 600;
+}
 .card-head{
+    margin: 0px;
+    padding: 0px;
+    display: inline;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
 }
 
 @media (max-width:800px){
