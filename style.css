@@ -1,21 +1,26 @@
 :root{
     --font-size:13px;
+
 }
+
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 body{
     background-color: hsl(210, 46%, 95%);
-    margin: 3% ;
+    margin:100px ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .card {
     border-radius: 5px;
     box-shadow: 1.5px 1.5px 13px 3px hsl(0, 0%, 81%);
-    display: flex; 
-    flex-direction: row;
-     flex-wrap: wrap;
+    
+    font-family: "sanserif";
 
 
 }
@@ -24,29 +29,30 @@ p{
   padding:0px 50px 0px 50px;
   font-size: var(--font-size);
   opacity: 70%;
-  font-weight: 500;
+  font-weight: 600;
 }
 h3{
     padding:  0px 46px 0px 50px;
     font-size:1em ;
+    margin-top:0;
+    line-height: 1.5rem;
 }
 img{
-    padding: 25px;
+    padding: 10px;
     border-radius: 50%;
 }
 .card:first-child{
 background-color: hsl(263, 55%, 52%);
 color:white ;
 grid-area: one;
+background-image:url("images/bg-pattern-quotation.svg") ; 
+background-repeat: no-repeat;
+ background-position: 80% 0;
 
 }
-.qua {
-    width: 105px;
-    height: 102px;
-    background-image:url("images/bg-pattern-quotation.svg") ; 
-    position: relative;
-    left: 400px;
-}
+
+
+
 .card:nth-child(2){
     background-color : hsl(217, 19%, 35%);
     color: white;
@@ -67,34 +73,37 @@ grid-area: one;
 }
 #container{
     display: grid;
-    grid-template-columns: repeat(2,350px );
-    grid-template-rows: repeat(2,fit-content);
+    grid-template-columns: repeat(2,300px );
     grid-template-areas: 
-    "one one two three"
-   "five four four three"
+    "one   one  two  three"
+    "one   one two    three"
+   " five four four  three"
+   "five four four three";
     
-    ;
     gap: 20px;
     justify-content: center;
 }
 .title{
- text-align: center;
- opacity: 50%;
+  opacity: 50%;
 } 
 
 .name{
     font-weight: 600;
 }
-.card-head{
-    margin: 0px;
-    padding: 0px;
-    display: inline;
+.pic{
+    
     display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-flow: row wrap ;
+    
 
 }
+
+
+h6{
+    margin-top: -20px;
+    opacity: 50%;
+}
+
 
 @media (max-width:800px){
     #container{
@@ -102,17 +111,9 @@ grid-area: one;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-    }
-    .qua{
-        position: relative;
-        left: 100px;
+
     }
     body{
         margin: 3em;
     }
-    h6{
-        transform: translate(-83px , -11px);
-
-    }
-
-    }
+}
